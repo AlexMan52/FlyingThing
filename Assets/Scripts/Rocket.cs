@@ -8,20 +8,23 @@ public class Rocket : MonoBehaviour
     [SerializeField] float shipRotationSpeed = 2f;
 
     Rigidbody rb_ship;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb_ship = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        ProcessInput();
+        Movement();
+        PlayBoostSound();
     }
 
-    private void ProcessInput()
+    private void Movement()
     {
         if (Input.GetKey(KeyCode.Space))
         {
@@ -37,4 +40,16 @@ public class Rocket : MonoBehaviour
         }
     }
 
+
+    void PlayBoostSound()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<AudioSource>().Play();
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+    }
 }

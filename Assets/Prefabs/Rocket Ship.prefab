@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2303268498922103776}
   - component: {fileID: 2303268498922103779}
   - component: {fileID: 2303268498922103778}
-  - component: {fileID: 2303268498922103789}
+  - component: {fileID: 1188977931}
   m_Layer: 0
   m_Name: Ship right wing
   m_TagString: Untagged
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 720f614472a52b943b205920b9b1906b, type: 2}
+  - {fileID: 2100000, guid: d8740a2cbc75af740babb3d3ce813ed5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2303268498922103789
-CapsuleCollider:
+--- !u!65 &1188977931
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,9 +90,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2303268499173036559
 GameObject:
@@ -105,7 +104,7 @@ GameObject:
   - component: {fileID: 2303268499173036547}
   - component: {fileID: 2303268499173036546}
   - component: {fileID: 2303268499173036557}
-  - component: {fileID: 2303268499173036556}
+  - component: {fileID: 1131377599}
   m_Layer: 0
   m_Name: Ship left wing
   m_TagString: Untagged
@@ -153,7 +152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 720f614472a52b943b205920b9b1906b, type: 2}
+  - {fileID: 2100000, guid: d8740a2cbc75af740babb3d3ce813ed5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -174,8 +173,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2303268499173036556
-CapsuleCollider:
+--- !u!65 &1131377599
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,9 +183,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2303268499712701589
 GameObject:
@@ -290,6 +288,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2303268499912870966}
+  - component: {fileID: 1543076646}
+  - component: {fileID: 1543076647}
   m_Layer: 0
   m_Name: Rocket Ship
   m_TagString: Untagged
@@ -314,3 +314,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1543076646
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303268499912870961}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1543076647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303268499912870961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67073d02ef4bf24498ecaa941a0f739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yVelocity: 1
+  shipRotationSpeed: 100

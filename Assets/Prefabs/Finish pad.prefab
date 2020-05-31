@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5798799903801408392}
   m_Layer: 0
   m_Name: Finish pad
-  m_TagString: Friendly
+  m_TagString: Finish pad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

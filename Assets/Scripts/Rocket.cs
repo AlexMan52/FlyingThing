@@ -66,8 +66,12 @@ public class Rocket : MonoBehaviour
                 Destroy(collision.gameObject);
                 AddFuel();
                 break;
+            case "Finish pad":
+                FindObjectOfType<LevelLoader>().LoadNextScene(); 
+                break;
             default:
                 Death();
+                FindObjectOfType<LevelLoader>().RestartScene();
                 break;
         }
     }   

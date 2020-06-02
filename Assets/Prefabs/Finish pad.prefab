@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3074329110564388684}
   - component: {fileID: 938617601213024176}
   - component: {fileID: 5798799903801408392}
+  - component: {fileID: 1591006022028185260}
   m_Layer: 0
   m_Name: Finish pad
   m_TagString: Finish pad
@@ -93,3 +94,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1591006022028185260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971067794014548295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c44813ab3e28e043a29e07e91beb3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDelay: 5

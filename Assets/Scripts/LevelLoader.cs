@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     int levelIndex;
+    [SerializeField] float timeToDelay = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextScene()
     {
-        levelIndex++;
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(levelIndex + 1);
     }
 
     public void RestartScene()

@@ -860,7 +860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yVelocity: 1100
   shipRotationSpeed: 200
-  timeToWait: 2.6
+  timeToWaitDeath: 1
+  timeToWaitNextLvl: 2.6
   shipEngine: {fileID: 8300000, guid: 9e3be7cf51fe5f94bb9427007c01613e, type: 3}
   shipExplosion: {fileID: 8300000, guid: d33cd34ea72850b4d8ab0b344e479426, type: 3}
   levelWin: {fileID: 8300000, guid: 3a4d9429e8d238646ba17367ac70b5e0, type: 3}
@@ -880,7 +881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: eec4d24bd9a19f9408708ff9907778b8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eec4d24bd9a19f9408708ff9907778b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -950,6 +951,10 @@ PrefabInstance:
     - target: {fileID: 100008, guid: e8ee802c71045d5478061ad7452d3b65, type: 3}
       propertyPath: m_Name
       value: MyFlameEmission
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: e8ee802c71045d5478061ad7452d3b65, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: e8ee802c71045d5478061ad7452d3b65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1022,7 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 67b27c7107ddbc34a97bf0326c7fdc2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 67b27c7107ddbc34a97bf0326c7fdc2a, type: 3}
       propertyPath: m_LocalPosition.x

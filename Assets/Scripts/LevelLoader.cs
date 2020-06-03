@@ -22,11 +22,13 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextScene()
     {
+        int levelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(levelIndex + 1);
     }
 
     public void RestartScene()
     {
+        int levelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(levelIndex);
     }
 

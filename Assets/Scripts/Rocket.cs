@@ -25,7 +25,7 @@ public class Rocket : MonoBehaviour
     enum State { Alive, Dying, Transcending };
     State state = State.Alive;
 
-
+    bool collisionsAreEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +54,13 @@ public class Rocket : MonoBehaviour
             {
                 rb_ship.constraints = RigidbodyConstraints.FreezePosition;
             }
-        
+        if (Debug.isDebugBuild)
+        {
+            if (Input.GetKeyDown(KeyCode.C)) // FOR DEBUG AND TESTING
+            {
+                collisionsAreEnabled = !collisionsAreEnabled;
+            }
+        }
     }
 
     private void Movement() // движение вверх, повороты по оси Z
@@ -95,7 +101,7 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) // действия при соприкосновении
     {
-        if (state != State.Alive) { return; } // проверка на то, что корабль жив
+        if (state != State.Alive || !collisionsAreEnabled) { return; } // проверка на то, что корабль жив
         switch (collision.gameObject.tag) // проверка с чем соприкасается корабль
         {
             case "Friendly":

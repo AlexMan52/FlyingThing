@@ -8,16 +8,30 @@ public class LevelLoader : MonoBehaviour
     int levelIndex;
     [SerializeField] float timeToDelay = 2f;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        int levelIndex = SceneManager.GetActiveScene().buildIndex;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Debug.isDebugBuild)
+        {
+            if (Input.GetKeyDown(KeyCode.L)) // FOR DEBUG AND TESTING
+            {
+                AdminLoadNextScene();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            Application.Quit();
+        }
+
     }
 
     public void LoadNextScene()
@@ -32,4 +46,14 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void AdminLoadNextScene()
+    {
+        int levelIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextLevelIndex = levelIndex + 1;
+        if(nextLevelIndex == SceneManager.sceneCountInBuildSettings) // проверка на наличие следующей сцены в билде
+        {
+            nextLevelIndex = 0;
+        }
+        SceneManager.LoadScene(nextLevelIndex);
+    }
 }

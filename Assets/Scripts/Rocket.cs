@@ -69,7 +69,7 @@ public class Rocket : MonoBehaviour
         {
             rb_ship.AddRelativeForce(0f, yVelocity * Time.deltaTime, 0f);
         }
-        rb_ship.freezeRotation = true; // убираем вращение (ручное управление), чтобы при столкновении не закручивало сильно
+        rb_ship.angularVelocity = Vector3.zero; // убираем вращение по законам физики, чтобы при столкновении не закручивало сильно
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward * shipRotationSpeed * Time.deltaTime);
@@ -78,7 +78,6 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(Vector3.back * shipRotationSpeed * Time.deltaTime);
         }
-        rb_ship.freezeRotation = false; // возвращаем вращение (рассчитывает физика)
     }
 
     private void PlayEngineSFXandVFX() // звук и огонь двигателя
